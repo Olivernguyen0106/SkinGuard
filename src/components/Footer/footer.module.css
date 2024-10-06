@@ -1,0 +1,31 @@
+.footer{
+    display:block;
+    align-items:center;
+    background:#F9F9F9; 
+    text-align: center;
+    color: black;
+    text-decoration:none;
+    font-weight: 400;
+    margin-top: 80px;
+}
+ul li a{
+    display:block;
+    align-items:center;
+    background:#F9F9F9; 
+    text-align: center;
+    color: black;
+    text-decoration:none;
+    font-weight: 400;
+    background: transparent;
+}
+.iconStyle{
+    border-radius: 100%;
+    background: #2382A0;
+    padding: 12px;
+    width: 16px;
+    height: 16px;
+}
+ul li{
+    display:flex;
+    align-items: center
+}

@@ -1,0 +1,10 @@
+.banner{
+    height: 150vh;
+    background-image: url("./../../assets/vector.png");
+    background-position: center;
+    background-repeat: repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}

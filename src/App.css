@@ -39,6 +39,11 @@ body {
   
 }
 
+.container{
+  max-width: 800px;
+  margin: 0 auto;
+}
+
 .header {
   display: flex;
   justify-content: space-between;
@@ -99,6 +104,12 @@ body {
   width: 25%;
 }
 
+/* Font Baloo2 */
+.baloo-2-text {
+  font-family: "Baloo 2", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
 
 @keyframes App-logo-spin {
   from {

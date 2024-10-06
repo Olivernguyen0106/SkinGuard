@@ -1,91 +1,108 @@
 // components/Header.js
 import React from "react";
-import foods from "./../../assets/foods.png"
-import skincare from "./../../assets/skincare.png"
-import clean from "./../../assets/clean.png"
+import styles from './tips.module.css'
+import vega from './../../assets/vega.png'
+import news from './../../assets/news.png'
+import img1 from './../../assets/1.png'
+import img2 from './../../assets/2.png'
+import skin3 from './../../assets/skin3.png'
+import skin4 from './../../assets/skin4.png'
+import TitleText from './../TitleText/titleText'
 
-function Tips() {
-  const listTips = [
+const Tips = () => {
+  const tips = [
     {
       id: 1,
-      title: 'Food Tips',
-      context: 'Avoid foods that are high in sugar, saturated fat, and salt. Instead, focus on:',
-      list: [
-        {id: 1, text: 'Fresh fruits and vegetables'},
-        {id: 2, text: 'Whole grains'},
-        {id: 3, text: 'Lean proteins'},
-        {id: 4, text: 'Healthy fats, such as olive oil, avocados, and nuts'},
-      ],
-      image: foods,
+      title: 'Eat your way to fabulous skin',
+      context: 'Beta-carotene, found in orange fruit and vegetables such as carrots, sweet potatoes and pumpkins, and lutein, found in kale, papaya and spinach, are both important for normal skin cell development and healthy skin tone.',
+      image: vega,
     },
     {
       id: 2,
-      title: 'SKIN CARE TIPS',
+      title: '6 Common Face Washing Mistakes & How To Overcome Them',
       context: '',
-      list: [ 
-        {id: 1, text: 'Wear sunscreen daily : Apply a broad-spectrum, water-resistant sunscreen with an SPF of 30 or highe'},
-        {id: 2, text: 'Stay out of tanning be :Tanning beds emit harmful UV radiation that causes skin cancer. In fact, one indoor tanning session can increase your risk of developing melanoma by 20%, squamous cell carcinoma by 67% and basal cell carcinoma by 29%.'},
-        {id: 3, text: 'Keep your hands off your face : Whenever you touch your face, you transfer dirt, germs, and oil from your hands to your'},
-      ],
-      image: skincare,
+      image: skin3,
     },
     {
       id: 3,
-      title: 'Face Washing tips',
+      title: 'How To Identify Your Skin Type, According To a Dermatologist',
       context: '',
-      list: [
-        {id: 1, text: 'Use a gentle, non-abrasive cleanser.'},
-        {id: 2, text: 'Wet your face with lukewarm water and use your fingertips.'},
-        {id: 3, text: 'Resist the temptation to scrub your skin.'},
-        {id: 4, text: 'Rinse with lukewarm water and pat dry with a soft towel.'},
-        {id: 5, text: 'Apply moisturizer.'},
-        {id: 6, text: 'Limit washing to twice a day and after sweating.'},
-      ],
-      image: clean,
+      image: skin4,
     },
   ]
-  const box = {
-    display:'flex',
-    gap: '80px',
-    padding: '20px 60px',
-    borderRadius: '0 500px 500px 0',
-    alignItems: 'center'
-  }
-  const textBox = {
-    backgroundColor: '#F0EBE380',
-    borderRadius: '0 500px 500px 0',
-    color: '#3E3C3C',
-    listStyleType: 'circle',
-    lineHeight: '20px',
-    padding: '20px 60px 20px 30px',
-    margin: 0,
-  }
-  const list = {
-    padding: '20px 60px 20px 30px',
-    margin: 0,
-  }
+  const headlines = [
+    {
+      id: 1,
+      title: 'Reducing Risk for Skin Cancer',
+      context: 'Most skin cancers are caused by too much exposure to ultraviolet rays. UV rays come from the sun, tanning beds, ... can damage skin cells.',
+      image: news,
+    },
+    {
+      id: 2,
+      title: 'Lots of People Apply Sunscreen Wrong. Here’s How to Do It Right.',
+      context: '',
+      image: img1,
+    },
+    {
+      id: 3,
+      title: 'Moisturizers: The Difference Between Gels, Lotions, Creams, and Ointments',
+      context: '',
+      image: img2,
+    },
+  ]
   return (
    <div>
-    <h1 style={{fontFamily: 'Aboreto'}}>Tips</h1>
-    {listTips.map((tip) => (
-      <div style={box} key={tip.id}>
-          <div style={{width: '30%'}}>
-              <img style={{width: '100%'}} src={tip.image}/>
-          </div>
-          <div style={{textAlign:'left', width: '70%' }}>
-              <p style={{fontWeight: '700', color:'#002B9A', textAlign:'center', textTransform: 'uppercase', fontSize: '20px'}}>{tip.title}</p>
-              <div style={textBox}>
-                <p style={{margin: 0}}>{tip?.context}</p>
-                <ul key={tip?.list?.id} style={{ padding: tip?.context ? undefined : '0', margin: tip?.context ? undefined : '0' }}>
-                {tip.list.map((list) => (
-                    <li>{list.text}</li>
-                  ))}
-                  </ul>
-              </div>
-          </div>
+    <TitleText text='Tips & Tricks' color='#60E1CB'/>
+    <div className={styles.titles}>
+      <h1>Popular</h1>
+      <h1>Top Headline</h1>
+    </div>
+    <div className={styles.grid}>
+      <div className={styles.popular}>
+        <div className={styles.content}>
+          <p style={{fontSize: '20px'}} className={styles.title}>{tips[0].title}</p>
+          <span>{tips[0].context}</span>
+        </div>
+        <div className={styles.image}>
+          <img style={{width: '100%'}} src={tips[0].image}/>
+        </div>
       </div>
-
-    ))}
+      {tips
+        .filter(tip => tip.id > 1)
+        .map((tip) => (
+          <div key={tip.id} className={styles.tips3}>
+            <div className={styles.content}>
+              <div className={styles.image}>
+                <img style={{width: '100%'}} src={tip.image}/>
+              </div>  
+              <p className={styles.title}>{tip.title}</p>
+            </div>
+          </div>  
+        ))
+      }
+      <div className={styles.headline}>        
+        <div className={styles.mainTips}>
+            <div className={styles.image}>
+              <img style={{width: '100%'}} src={headlines[0].image}/>
+            </div>  
+            <p className={styles.title}>{headlines[0].title}</p>
+            <span>{headlines[0].context}</span>
+        </div>
+        <div className={styles.listHead}>
+        {headlines
+          .filter(item => item.id > 1)
+          .map((item) => (
+            <div key={item.id} className={styles.item}>
+              <div className={styles.img}>
+                <img style={{width: '100%'}} src={item.image} alt={item.title}/>
+              </div>
+              <p className={styles.title}>{item.title}</p>
+            </div>
+          ))
+        }
+        </div>
+      </div>
+    </div>
    </div>
   );
 }

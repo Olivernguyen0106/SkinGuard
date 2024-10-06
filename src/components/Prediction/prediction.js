@@ -1,46 +1,44 @@
 // components/Header.js
 import React from "react";
-import computer from "./../../assets/computer.png"
 import arrow from "./../../assets/arrow.svg"
+import styles from './prediction.module.css'
+import images from './../../assets/images.png'
+import settings from './../../assets/settings.png'
+import tips from './../../assets/tips.png'
+import tricks from './../../assets/tricks.png'
+import TitleText from './../TitleText/titleText'
 
-function Prediction() {
-  const box = {
-    backgroundColor: '#FFF5FF',
-    display:'flex',
-    gap: '80px',
-    padding: '20px 60px',
-    borderRadius: '0 500px 500px 0',
-  }
-  const button = {
-    display:'flex',
-    alignItems: 'center',
-    textAlign: 'center',
-    height: 'fit-content',
-    width: 'fit-content',
-    gap: '10px',
-    border: '2px solid #2382A0',
-    borderRadius: '100px',
-    textTransform: 'uppercase',
-    color: '#2382A0',
-    padding: '5px 20px',
-    fontSize: '14px',
-    background: 'none',
-  }
+const Prediction = () => {
+  const items = [
+    {id: 1, title: 'Skin Cancer Prediction', image: settings},
+    {id: 2, title: 'Skin Care Tips', image: tips},
+    {id: 3, title: 'Skin Care Tricks', image: tricks},
+  ]
   return (
-   <div style={{margin: '24px 0'}}>
-    <h1 style={{    fontFamily: 'Aboreto',}}>Our Service</h1>
-    <div style={box}>
-        <div style={{textAlign:'left', width: '70%' }}>
-            <h1 style={{fontWeight: '700', color:'#002B9A'}}>Prediction</h1>
-            <p style={{color: '#555555', }}>Using advanced technology, SkinGuard provides fast, accurate predictions to help you stay informed and proactive about your skin’s health. Take a step towards early detection and peace of mind with just a few clicks. Your skin’s safety starts here!
-            </p>
-            <button style={button}>Learn more <img src={arrow}/></button>
+   <div>
+    <TitleText text='Our Service'/>
+    <div className={styles.box}>
+        <div className={styles.content}>
+          <div className={styles.text}>
+            <h4>KEY FEATURES</h4>
+            <h1>We offer best <b>services</b></h1>
+          </div>
+            <div className={styles.items}>
+            {items.map((item) => (
+                <div key={item.id} className={styles.item}>
+                  <div className={styles.icon}>
+                    <img style={{width: "100%"}} src={item.image}/>
+                  </div>
+                  <p>{item.title}</p>
+                </div>
+            ))}
+            </div>
         </div>
-        <div style={{width: '30%'}}>
-            <img style={{width: '100%'}} src={computer}/>
+        <div className={styles.image}>
+          <img style={{width:"100%"}} src={images}/>
+          </div>
         </div>
     </div>
-   </div>
   );
 }
 
