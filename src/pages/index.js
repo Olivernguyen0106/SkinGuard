@@ -20,15 +20,15 @@ const Home = () => {
   };
 
   return (
-    <div style={{ display: 'flex', flexDirection: 'column', gap: '50px' }}>
-      {/* <Header 
+    <div style={{ display: 'flex', flexDirection: 'column', gap: '50px'}}>
+      <Header       
         scrollToSection={scrollToSection}
+        homeRef={homeRef}
         aboutRef={aboutRef}
         tipsRef={tipsRef}
-        homeRef={homeRef}
         contactRef={contactRef}
-      /> */}
-      <div className="container" ref={homeRef}>
+      />
+      <div style={{paddingTop:"10%"}} className="container" ref={homeRef}>
         <Hero/>
       </div>
       <section ref={aboutRef}>
@@ -41,9 +41,9 @@ const Home = () => {
       <div className="container" ref={tipsRef}>
         <Tips/>
       </div>
-      {/* <section ref={contactRef}>
+      <section ref={contactRef}>
         <Footer/> 
-      </section> */}
+      </section>
     </div>
   );
 };

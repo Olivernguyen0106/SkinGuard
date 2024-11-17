@@ -7,9 +7,8 @@ import AppRoutes from './Routes';
 function App() {
   return (
     <Router>
-      <Header/>
-      <AppRoutes />  {/* Điều hướng giữa các trang */}
-      <Footer/>
+      <AppRoutes />
+      {/* <Footer/> */}
   </Router>
         
     

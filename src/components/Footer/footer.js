@@ -1,18 +1,17 @@
 // components/Header.js
-import React from "react";
+import React, { useState } from "react";
 import logo from './../../assets/logo.png';
 import phone from './../../assets/phone.png';
 import github from './../../assets/github.png';
 import email from './../../assets/email.png';
 import styles from './footer.module.css'
 
-function Footer() {
+const Footer = () => {
     const links = [
         {id: 1, title: 'Email', icon: email, link: 'mailto:binh@gmail.com' },
         {id: 2, title: 'Phone', icon: phone, link: 'tel:+849066589' },
         {id: 3, title: 'Github', icon: github, link: 'mailto:someone@example.com' },
     ]
-
   return (
     <footer className={styles.footer}>
       <div style={{ justifyContent:'center', paddingTop: '6px'}}>
