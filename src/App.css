@@ -104,9 +104,18 @@ body {
   width: 25%;
 }
 
+
+
 /* Font Baloo2 */
 .baloo-2-text {
   font-family: "Baloo 2", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+/* Font Sen */
+.sen-text {
+  font-family: "Sen", sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
 }

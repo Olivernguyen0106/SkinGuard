@@ -2,8 +2,8 @@ export const skinCancer = [
     {
         id: 5,
         label: "Melanoma",
-        cause: "caused by DNA damage in skin cells, often due to ultraviolet (UV) radiation from sunlight or tanning beds. This damage can lead to mutations in the DNA of melanocytes, triggering abnormal cell growth.",
-        effect: "Risk factors include UV radiation exposure, fair skin, numerous moles, and genetic predisposition",
+        cause: "Caused by DNA damage in skin cells, often due to ultraviolet (UV) radiation from sunlight or tanning beds. This damage can lead to mutations in the DNA of melanocytes, triggering abnormal cell growth.",
+        effect: "Melanoma often begins with changes in the skin, such as irregular moles, sores, or bleeding. If it spreads to vital organs like the lungs, liver, or brain, it can lead to severe complications, including difficulty breathing, intense pain, or neurological issues.",
         signs: [
             {id:1, content: 'A (Asymmetry): One half of the mole does not match the other.'},
             {id:2, content: 'B (Border): Irregular, ragged, or blurred edges.'},
@@ -16,10 +16,12 @@ export const skinCancer = [
             {id:2, content: 'Use Sunscreen: Apply a broad-spectrum sunscreen with at least SPF 30, and reapply every two hours.'},
             {id:3, content: 'Wear Protective Clothing: Use hats, sunglasses, and clothing that covers the skin.'}
         ],
+        type: "Cancerous",
+        link: "https://en.wikipedia.org/wiki/Melanoma",
       },
     {id: 2, label: "Benign Keratosis-Like Lesions",
         cause: "Primarily caused by factors such as aging, cumulative sun exposure, and genetic predisposition. Sun damage plays a significant role in the development of these lesions, especially in fair-skinned individuals.",
-        effect: "They can cause discomfort if irritated, itchy, or if they catch on clothing. In rare cases, these lesions can become inflamed or infected, but they do not pose a health risk",
+        effect: "These lesions can cause discomfort if irritated, itchy, or if they catch on clothing. In rare cases, it can become inflamed or infected, but they do not pose a health risk",
         signs: [
             {id:1, content: 'Appearance: Small, raised, and scaly patches that can range in color from light tan to dark brown or black.'},
             {id:2, content: 'Texture: They may feel rough, waxy, or wart-like.'},
@@ -31,6 +33,8 @@ export const skinCancer = [
             {id:2, content: 'Avoid Tanning Beds: UV radiation from tanning beds can damage skin and promote lesion formation.'},
             {id:3, content: 'Maintain Skin Health: Use moisturizers to keep skin hydrated, as dry skin may contribute to lesion formation'}
         ],
+        type: "Non-cancerous",
+        link: "https://en.wikipedia.org/wiki/Seborrheic_keratosis",
     },
     {id: 1, label: "Basal Cell Carcinoma", 
         cause: "Primarily caused by long-term exposure to ultraviolet (UV) radiation from the sun or tanning beds. UV rays damage the DNA in skin cells, leading to abnormal growth of basal cells. Other risk factors include fair skin, a history of sunburns, genetic predisposition, exposure to radiation, and immune suppression",
@@ -47,10 +51,12 @@ export const skinCancer = [
             {id:3, content: 'Wear Protective Clothing: Use hats, sunglasses, and clothing that covers exposed skin.'},
             {id:4, content:' Avoid Tanning Beds: UV radiation from tanning beds increases skin cancer risk.'}
         ],
+        type: "Cancerous",
+        link: "https://en.wikipedia.org/wiki/Basal-cell_carcinoma",
     },
     {id: 0, label: "Actinic Keratoses", 
         cause: "Actinic Keratoses (AKs) are caused primarily by long-term exposure to ultraviolet (UV) radiation from the sun or tanning beds. UV rays damage the DNA in skin cells, leading to abnormal cell growth and the development of rough, scaly patches on the skin. People with fair skin, a history of sunburns, or a weakened immune system are at higher risk.",
-        effect: "affect the skin, creating rough, scaly patches, usually on sun-exposed areas such as the face, ears, neck, scalp, and hands. While they are not cancerous, they indicate skin damage and have the potential to develop into squamous cell carcinoma if left untreated. AKs can cause discomfort, including itching, burning, or tenderness.",
+        effect: "Affect the skin, creating rough, scaly patches, usually on sun-exposed areas such as the face, ears, neck, scalp, and hands. While they are not cancerous, they indicate skin damage and have the potential to develop into squamous cell carcinoma if left untreated. AKs can cause discomfort, including itching, burning, or tenderness.",
         signs: [
             {id:1, content: 'Rough, scaly patches on the skin that can feel dry or like sandpaper.'},
             {id:2, content: 'Flat or slightly raised lesions, often less than an inch in diameter.'},
@@ -63,10 +69,12 @@ export const skinCancer = [
             {id:3, content: 'Wear Protective Clothing: Use hats, sunglasses, and clothing that covers exposed skin.'},
             {ID:4, content: 'Avoid Tanning Beds: UV radiation from tanning beds increases skin cancer risk.'}
         ],
+        type: "Cancerous",
+        link: "https://en.wikipedia.org/wiki/Actinic_keratosis",
     },
     {id : 6, label: "Vascular Lesions", 
         cause: "Caused by abnormalities in blood vessels, including congenital conditions, sun damage, injury, hormonal changes, or aging. These lesions can develop when blood vessels dilate or form improperly, leading to visible marks on the skin",
-        effect: "lead to visible effects on the skin, including red, purple, or blue marks, which can vary in size and shape. Depending on the type and location, they might cause cosmetic concerns, discomfort, swelling, or a sensation of warmth. In some cases, such as with larger or deeper lesions, they can lead to complications like bleeding, ulceration, or interfere with normal function, especially if located near vital structures.",
+        effect: "Lead to visible effects on the skin, including red, purple, or blue marks, which can vary in size and shape. Depending on the type and location, they might cause cosmetic concerns, discomfort, swelling, or a sensation of warmth. In some cases, such as with larger or deeper lesions, they can lead to complications like bleeding, ulceration, or interfere with normal function, especially if located near vital structures.",
         signs: [
             {id:1, content: 'Color: Red, purple, or blue marks on the skin.'},
             {id:2, content: 'Shape: Spots, patches, or clusters of veins'},
@@ -80,6 +88,8 @@ export const skinCancer = [
             {id:3, content: 'Wear Compression Stockings: If prone to varicose veins, wear compression stockings to improve blood flow.'},
             {ID:4, content: 'Limit Alcohol Consumption: Excessive alcohol can cause blood vessels to dilate.'}
         ],
+        type: "Non-cancerous",
+        link: "https://en.wikipedia.org/wiki/Vascular_tumor",
     },
     {id: 3, label: "Dermatofibroma", 
         cause: "It often develops as a reaction to minor skin injuries, such as insect bites, trauma, or a thorn prick. It is a benign skin growth resulting from an overgrowth of fibrous tissue in the dermis",
@@ -94,6 +104,8 @@ export const skinCancer = [
             {id:1, content: 'Minimizing skin injuries, such as avoiding insect bites, using proper protection during outdoor activities,'},
             {id:2, content: 'Treating minor skin trauma promptly'},
         ],
+        type: "Non-cancerous",
+        link: "https://en.wikipedia.org/wiki/Dermatofibroma",
     },
     {id: 4, label: "Melanocytic Nevi", 
         cause: "Primarily caused by the proliferation of melanocytes, the cells responsible for producing pigment in the skin. This can occur due to a combination of genetic factors and sun exposure, especially in childhood. Hormonal changes during puberty or pregnancy can also stimulate the formation of new nevi or changes in existing ones.",
@@ -111,5 +123,7 @@ export const skinCancer = [
             {id:4, content: 'Wear Protective Clothing: Use hats, sunglasses, and clothing that covers exposed skin.'},
 
         ],
+        type: "Non-cancerous",
+        link: "https://en.wikipedia.org/wiki/Melanocytic_nevus",
     },
 ]

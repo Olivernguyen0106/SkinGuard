@@ -12,7 +12,7 @@ const Prediction = () => {
   const items = [
     {id: 1, title: 'Skin Cancer Prediction', image: settings},
     {id: 2, title: 'Skin Care Tips', image: tips},
-    {id: 3, title: 'Skin Care Tricks', image: tricks},
+    {id: 3, title: 'Skin Cancer Informations', image: tricks},
   ]
   return (
    <div>

@@ -3,13 +3,18 @@ import styles from './uploadFile.module.css'
 import icon from './../../assets/IconUp.png'
 import Loading from "../Loading/loading";
 
-const UploadFile = ({loading, setFile, file, handleSubmit, prediction, setPrediction}) => {
+const UploadFile = ({setError, loading, setFile, file, handleSubmit, prediction, setPrediction}) => {
   const handleFileChange = (e) => {
     setFile(e.target.files[0]);
   };
   const retry = () => {
     setFile(null);
     setPrediction(null)
+  }
+  const removeImg = () => {
+    setFile(null);
+    setPrediction(null)
+    setError(false)
   }
   return (
     <div className={styles.uploadPart}>
@@ -25,7 +30,7 @@ const UploadFile = ({loading, setFile, file, handleSubmit, prediction, setPredic
             />
           </div>
           {prediction === null && (
-            <button className={styles.deleteBut} onClick={() => setFile(null)}>Remove</button>
+            <button className={styles.deleteBut} onClick={removeImg}>Remove</button>
           )}
           {prediction !== null ? (
             <button onClick={retry} className={styles.predictBut}><p>Try Again</p></button>

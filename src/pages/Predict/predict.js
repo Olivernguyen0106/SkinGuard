@@ -23,13 +23,14 @@ const Predict = () => {
     formData.append("file", file);
     setLoading(true)
     try {
-      const response = await axios.post("https://3b15-34-150-228-11.ngrok-free.app/", formData, {
+      const response = await axios.post("https://1626-34-16-196-98.ngrok-free.app/", formData, {
         headers: { "Content-Type": "multipart/form-data" },
       });
       setPrediction(response.data);
     } catch (error) {
       console.error("Error uploading file", error);
       setError(true)
+      
     }
     setLoading(false)
   };
@@ -49,7 +50,7 @@ const Predict = () => {
         {showToast &&
           <div>Hello</div> || null}
         <div className={styles.upload}>
-          <UploadFile loading={loading} setFile={setFile} file={file} handleSubmit={handleSubmit} prediction={prediction} setPrediction={setPrediction}/>
+          <UploadFile setError={setError} loading={loading} setFile={setFile} file={file} handleSubmit={handleSubmit} prediction={prediction} setPrediction={setPrediction}/>
           <div className={styles.resultSection}>
           {loading ? (
             <Loading />
@@ -62,6 +63,10 @@ const Predict = () => {
               <h4 style={{ display: "flex", alignItems: "center", gap: "6px" }}>
                 Diagnosed: <br />
                 <p className={styles.resultText}>{result.label}</p>
+              </h4>
+              <h4 style={{ display: "flex", alignItems: "center", gap: "6px" }}>
+                Types of Lesions: <br />
+                <p className={styles.resultText}>{result.type}</p>
               </h4>
               <h4>Causes:</h4>
               <p className={styles.resultText}>{result.cause}</p>
@@ -83,6 +88,9 @@ const Predict = () => {
                   </li>
                 ))}
               </ul>
+              <i>
+                <a disabled={!result.link && 'disabled'} style={{textDecoration: 'revert-layer', fontFamily:'Sen'}} href={result.link} target='_blank'>For more information, please click here!!!</a>
+              </i>
             </div>
           ) : !error ? (
             <div className={styles.nofound}>

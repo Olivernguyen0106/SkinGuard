@@ -1,0 +1,363 @@
+.container{
+    max-width: 1200px;
+    margin: 60px auto;
+    padding-top: 5%;
+}
+.infor{
+    font-family: 'Sen';
+}
+.section1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    gap:30px;
+}
+.section1 h1{
+    font-size: 50px;
+    margin: 0;
+}
+.section1 span{
+    color: #5F5F75;
+}
+
+/* SECTION 2 */
+.section2{
+    display: flex;
+    flex-direction: column;
+    margin: 24px 100px;
+    gap: 30px;
+}
+
+.section2 .img{
+    width: 25%;
+}
+
+img{
+    width: 100%;
+}
+
+h1{
+    margin: 0;
+}
+
+.section2 .informationBox .question{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+}
+.section2 .informationBox{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    width: 75%;
+}
+
+.section2 .mole{
+    display: flex;
+    gap: 60px;
+    align-items: center;
+}
+
+.section2 .box{
+    background-color: #60e1cb45;
+    padding: 24px ;
+    border-radius: 16px;
+}
+
+.section2 .cancer{
+    display: flex;
+    gap: 60px;
+    align-items: center;
+}
+
+.boldText{
+    width: 100%;
+    color: #2F277F;
+}
+
+/* SECTION 3 */
+.section3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    gap: 30px;
+
+}
+
+.section3 span{
+    display: flex;
+    align-items: center;
+    padding: 0 100px;
+    color: #5F5F75;
+}
+
+.section3 h2{
+    color: #2B2B39;
+}
+
+/* section 5 */
+.section5{
+    width: 100%;
+    padding: 48px 0;
+}
+.section5 .threats .img{
+    width: 40%;
+}
+.section5 .threats .infThreats{
+    width: 60%;
+    padding: 40px 50px;
+    gap: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.section5 .threats .infThreats .title{
+   display: flex;
+   justify-content: left;
+   align-items: center;
+}
+.section5 .threats .infThreats .title h2{
+    font-size: 50px ;
+    font-weight: 600;
+    color: #2B2B39;
+    margin: 0;
+ }
+
+.section5 .threats .infThreats .content{
+    color: #5F5F75;
+}
+
+.section5 .threats{
+    display: flex;
+}
+.section5 .listThreats{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.section5 .threat {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.section5 .threat .circle{
+    display: flex;
+    justify-content: center;
+    width: 14px;
+    border-radius: 100%;
+    padding: 14px;
+    background-color: #F2F2F2;
+}
+
+
+/* SECTION 6 */
+.section6{
+    max-width: 1000px;
+    margin: 0 auto;
+}
+.section6 .title h2{
+    font-size: 50px ;
+    font-weight: 600;
+    color: #2B2B39;
+    margin: 0;
+ }
+
+.section6 .content{
+    width: 80%;
+    color: #5F5F75;
+}
+
+.section6 .chars{
+    display: flex;
+    flex-direction: column;
+    border-left: 4px solid #378D7F;
+    margin-left: 80px;
+}
+.section6 .chars p{
+    width: 70%;
+}
+.section6 .chars .eachCharA{
+
+}
+
+.section6 .chars .eachCharA::before{
+    content: "";
+    border-radius: 50%;
+    height: 60px;
+    width: 60px;
+    position: absolute;
+    background-color: white;
+    left: -82px;
+    background-image: url("./../../assets/A.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.section6 .chars .eachCharB{
+
+}
+
+.section6 .chars .eachCharB::before{
+    content: "";
+    border-radius: 50%;
+    height: 60px;
+    width: 60px;
+    position: absolute;
+    background-color: white;
+    left: -82px;
+    background-image: url("./../../assets/B.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.section6 .chars .eachCharC{
+
+}
+
+.section6 .chars .eachCharC::before{
+    content: "";
+    border-radius: 50%;
+    height: 60px;
+    width: 60px;
+    position: absolute;
+    background-color: white;
+    left: -82px;
+    background-image: url("./../../assets/C.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.section6 .chars .eachCharD{
+
+}
+
+.section6 .chars .eachCharD::before{
+    content: "";
+    border-radius: 50%;
+    height: 60px;
+    width: 60px;
+    position: absolute;
+    background-color: white;
+    left: -82px;
+    background-image: url("./../../assets/D.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.section6 .chars .eachCharE{
+    
+}
+
+.section6 .chars .eachCharE::before{
+    content: "";
+    border-radius: 50%;
+    height: 60px;
+    width: 60px;
+    position: absolute;
+    background-color: white;
+    left: -82px;
+    background-image: url("./../../assets/E.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.section6 .chars [class*="eachChar"] {
+    margin-bottom:12px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 50px;
+    position: relative;
+}
+
+/* SECTION 7 */
+.section7{
+    max-width: 900px;
+    margin: 50px auto;
+
+}
+.section7 h2{
+    font-size: 42px;
+}
+.section7 .break{
+    display: flex;
+    gap: 30px;
+}
+.section7 .answer{
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    gap: 12px;
+}
+.section7 .answer p{
+    margin: 0;
+    color: #5F5F75;
+    font-weight: 500;
+    font-size: 18px;
+}
+.section7 .eachAns{
+    display: flex;
+    flex-direction: column;
+}
+.section7 .img{
+    width: 30%;
+}
+
+/* SECTION 8 */
+.section8{
+    padding: 50px 0;
+}
+.section8 .title h2{
+    width: 100%; 
+    border-bottom: 5px solid #60E1CB; 
+    line-height: 0.1em;
+    margin: 10px 0 20px;
+}
+.section8 .title span{
+    background:#fff; 
+    padding:0 10px; 
+}
+.section8 .types .grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    padding: 30px;
+}
+.section8 .types .grid .grid-item{
+    padding: 10px;
+    font-size: 30px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #fff;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.section8 h2{
+    font-size: 42px;
+}
+
+/* SECTION 9 */
+.section9{
+    margin: 50px 0;
+}
+.section9 .image5{
+    width: 100%;
+}
+.section9 .image5 img{
+    width: 100%;
+}

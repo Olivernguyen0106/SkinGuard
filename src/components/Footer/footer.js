@@ -27,7 +27,7 @@ const Footer = () => {
           <li><a href="#about">About</a><span style={{ padding: '0 10px' }}>|</span></li>
           <li><a href="#prediction">Prediction</a><span style={{ padding: '0 10px' }}>|</span></li>
           <li><a href="#news">Tips</a><span style={{ padding: '0 10px' }}>|</span></li>
-          <li><a href="#contact">Contact Us</a></li>
+          <li><a href="#information">Information</a></li>
         </ul>
         <div style={{ background:'#2382A0', padding: '12px'}}>
             <h4 style={{margin: 0, color: '#fff', fontSize: '16px', fontWeight: 600, paddingBottom: '12px', fontFamily: 'Aboreto',}}>Detect Early, Protect Daily, Live Fearlessly!</h4>

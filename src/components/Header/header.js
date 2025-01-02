@@ -19,20 +19,8 @@ const Header = ({ scrollToSection, homeRef, aboutRef, tipsRef, contactRef }) => 
       <div className="logo" style={{ width: '15%' }}>
         <img style={{ width: '100%' }} src={logo} alt="Logo"/>
       </div>
-      {currentUrl === '/predict' ? (
-         <div style={{ width: '85%', display: 'flex', justifyContent: 'center' }} className={styles.circle}>
-         <ul style={{ width: '100%', display: 'flex', alignItems: 'center', justifyContent: 'space-between', margin: 0 }}>
-            <li style={{display:"flex", gap:"12px"}} onClick={() => {
-                  navigate('/');
-                }} className={isActive("/") ? "active" : ""}>
-                  <div style={{width:"2%", display:"flex", alignContent:"center"}}>
-                    <img style={{width:"100%"}} src={leftArrow}/>
-                  </div>
-              <a>Home</a>
-            </li>
-         </ul>
-       </div>
-      ) : (
+      {currentUrl === '/' ? 
+      (
         <div style={{ width: '85%', display: 'flex', justifyContent: 'center' }} className={styles.circle}>
         <ul style={{ width: '100%', display: 'flex', alignItems: 'center', justifyContent: 'space-between', margin: 0 }}>
               <li className={isActive("/") ? "active" : ""}>
@@ -82,17 +70,30 @@ const Header = ({ scrollToSection, homeRef, aboutRef, tipsRef, contactRef }) => 
               </li>
               <li>
                 <a
-                  onClick={() => {
-                    scrollToSection(contactRef);
-                    setSelected('contact');
+                   onClick={() => {
+                    navigate('/information');
+                    setSelected('information');
                   }}
                   className={`${styles.heading} ${selected === 'contact' ? styles.active : ''}`}
                 >
-                  Contact
+                  Information
                 </a>
               </li>
         </ul>
       </div>
+      ) : (
+        <div style={{ width: '85%', display: 'flex', justifyContent: 'center' }} className={styles.circle}>
+        <ul style={{ width: '100%', display: 'flex', alignItems: 'center', justifyContent: 'space-between', margin: 0 }}>
+          <li style={{display:"flex", gap:"12px"}} onClick={() => {
+                navigate('/');
+              }} className={isActive("/") ? "active" : ""}>
+                <div style={{width:"2%", display:"flex", alignContent:"center"}}>
+                  <img style={{width:"100%"}} src={leftArrow}/>
+                </div>
+            <a>Home</a>
+          </li>
+        </ul>
+      </div>      
       )}
     </header>
   );

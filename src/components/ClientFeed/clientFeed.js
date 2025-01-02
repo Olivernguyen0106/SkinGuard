@@ -9,11 +9,6 @@ import listImg from './../../assets/listImg.png'
 
 
 const ClientFeed = () => {
-  const items = [
-    {id: 1, title: 'Skin Cancer Prediction', image: settings},
-    {id: 2, title: 'Skin Care Tips', image: tips},
-    {id: 3, title: 'Skin Care Tricks', image: tricks},
-  ]
   return (
    <div>
     <div className={styles.banner}>

@@ -1,22 +1,40 @@
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+}
 .box{
     height: 100vh;
-    background-image: url("./../../assets/aboutus-bg.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
     display: flex;
-    flex-direction: column;
-    gap: 24px;
-}
-.box p{
-    margin: 0; 
-    height: 100%;
+    gap: 40px;
+    justify-content: center;
     align-items: center;
 }
+.box h2{
+    text-transform: uppercase;
+    background: linear-gradient(to right, #0048FF 0%, #D6008D 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-family: 'Aboreto';
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 56px;
+    text-align: left;
+    margin: 0;
+    font-weight: 600;
+}
+.box span{
+    font-family: 'Sen';
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 36px;
+    text-align: left;
+}
+
 
 .box .title{
     padding: 48px 0;
-    font-family: Aboreto;
+    font-family: 'Sen';
     font-size: 32px;
     font-weight: 700;
     line-height: 76.9px;
@@ -30,7 +48,7 @@
     justify-content: center;
     box-shadow: 0px 97px 90px 0px #07003B26;
     background: #FDFDFF;
-    font-family: Geologica;
+    font-family: 'Sen';
     font-size: 18px;
     font-weight: 400;
     text-align: left;
