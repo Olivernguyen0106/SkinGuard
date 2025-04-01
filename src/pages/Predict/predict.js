@@ -23,7 +23,7 @@ const Predict = () => {
     formData.append("file", file);
     setLoading(true)
     try {
-      const response = await axios.post("https://90ec-34-16-196-98.ngrok-free.app/", formData, {
+      const response = await axios.post("https://b1fd-34-74-192-21.ngrok-free.app/", formData, {
         headers: { "Content-Type": "multipart/form-data" },
       });
       setPrediction(response.data);
